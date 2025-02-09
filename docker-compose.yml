@@ -17,9 +17,9 @@
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: 
+      POSTGRES_DB: MyFinances
     volumes:
-      - ./docker_data/players_pg_data:/var/lib/postgresql/data
+      - ./docker_data/finances_pg_data:/var/lib/postgresql/data
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready" ]
       interval: 10s
