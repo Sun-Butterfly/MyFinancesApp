@@ -7,7 +7,7 @@
       dockerfile: Dockerfile
     environment:
       ASPNETCORE_URLS: "http://+:80"
-      ConnectionStrings__DefaultConnection: 'Host=games-postgres;Port=5432;Username=postgres;Password=postgres;Database=Games'
+      ConnectionStrings__DefaultConnection: 'Host=postgres;Port=5432;Username=postgres;Password=123;Database=MyFinances'
     ports:
       - "7070:80"
   
@@ -16,7 +16,7 @@
     image: postgres
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: 123
       POSTGRES_DB: MyFinances
     volumes:
       - ./docker_data/finances_pg_data:/var/lib/postgresql/data
